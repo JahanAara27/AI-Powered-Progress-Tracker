@@ -1,0 +1,88 @@
+{
+  "model_name": "HabitConsistencyPredictor",
+  "model_version": "1.0-rf",
+  "selected_algorithm": "LogisticRegression",
+  "algorithm_choice_rationale": "Logistic Regression (Selected based on test performance)",
+  "training_date": "2026-10-30T02:29:33.250625",
+  "features": [
+    "rate_7d",
+    "rate_14d",
+    "rate_30d",
+    "avg_rate",
+    "std_rate",
+    "activity_variance",
+    "current_streak",
+    "longest_streak",
+    "missed_days_count",
+    "days_since_last_checkin",
+    "weekly_frequency",
+    "recent_trend",
+    "practice_minutes_avg"
+  ],
+  "feature_importances": {
+    "rate_7d": 0.2495,
+    "rate_14d": 0.1823,
+    "rate_30d": 0.1259,
+    "avg_rate": 0.1438,
+    "std_rate": 0.0174,
+    "activity_variance": 0.0151,
+    "current_streak": 0.0406,
+    "longest_streak": 0.0233,
+    "missed_days_count": 0.1005,
+    "days_since_last_checkin": 0.0,
+    "weekly_frequency": 0.0001,
+    "recent_trend": 0.0225,
+    "practice_minutes_avg": 0.0792
+  },
+  "baseline_logistic_regression": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        175,
+        0
+      ],
+      [
+        0,
+        113
+      ]
+    ]
+  },
+  "candidate_random_forest": {
+    "precision": 1.0,
+    "recall": 0.9646,
+    "f1": 0.982,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        175,
+        0
+      ],
+      [
+        4,
+        109
+      ]
+    ]
+  },
+  "selected_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        175,
+        0
+      ],
+      [
+        0,
+        113
+      ]
+    ]
+  },
+  "training_samples": 1152,
+  "test_samples": 288,
+  "validation_strategy": "Chronological split (80/20)"
+}

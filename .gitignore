@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+.env.local
+__pycache__/
+*.pyc
+.pytest_cache/
+models/*.joblib
+!models/.gitkeep
+training/*.csv
+.DS_Store
+*.log
